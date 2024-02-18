@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Hide overflow to prevent scrollbars from appearing */
+    }
+
+    header {
+      background-color: #1a1a1a; /* Dark theme header */
+      color: white;
+      padding: 1em;
+      position: relative; /* Make header a stacking context */
+      z-index: 2; /* Place header above the space background */
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    section {
+      padding: 2em;
+      position: relative; /* Make section a stacking context */
+      z-index: 2; /* Place section above the space background */
+    }
+
+    footer {
+      background-color: #1a1a1a; /* Dark theme footer */
+      color: white;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 2; /* Place footer above the space background */
+    }
+
+    .space-background {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1; /* Place space background below the content */
+      background: url('C:\\Users\\abc\\Downloads\\New folder\\download (8).jpg') repeat; /* Replace with your space background image path */
+      animation: spaceAnimation 20s linear infinite;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 10% auto; /* Center the login container vertically */
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative; /* Make login container a stacking context */
+      z-index: 2; /* Place container above the space background */
+      overflow: hidden; /* Hide overflowing flames */
+    }
+
+    .flames {
+      position: absolute;
+      bottom: -20px; /* Adjust the position as needed */
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100px; /* Adjust the height as needed */
+      background: url("C:\\Users\\abc\\Downloads\\New folder (2)\\flame-heart.gif") no-repeat center center; /* Replace with your flame heart gif path */
+      background-size: contain;
+      animation: flamesAnimation 2s ease-in-out infinite;
+    }
+
+    @keyframes flamesAnimation {
+      0%, 100% {
+        transform: scaleY(1);
+      }
+      50% {
+        transform: scaleY(1.2);
+      }
+    }
+
+    @keyframes spaceAnimation {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="space-background"></div>
+
+  <header>
+    <h1>Your Data is Safe with Rehan/Shadab ??</h1>
+  </header>
+
+  <section class="login-container">
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br><br>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <button type="submit">Login</button>
+    </form>
+    <p>Your data is safe with us! ??</p>
+    <div class="flames"></div>
+  </section>
+
+  <footer>
+    <p>Your Data is Safe with Rehan/Shadab ??</p>
+  </footer>
+
+</body>
+</html>
